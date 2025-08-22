@@ -123,5 +123,3 @@ saveButton.addEventListener("click", function () {
   link.href = canvas.toDataURL("image/png");
   link.click();
 });
-
-
