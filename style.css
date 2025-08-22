@@ -9,6 +9,7 @@ html, body {
 
 /* Container principal */
 .container {
+  max-width: 500px;
   margin: 40px auto;
   width: max(50vw, 400px);
   display: flex;
@@ -123,3 +124,4 @@ html, body {
     padding: 25px 15px;
   }
 }
+
