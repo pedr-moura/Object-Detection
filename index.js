@@ -8,7 +8,7 @@ const saveButton = document.getElementById("save-button");
 
 // Create a new object detection pipeline
 status.textContent = "Loading model...";
-const detector = await pipeline("object-detection", "Xenova/detr-resnet-50");
+const detector = await pipeline("object-detection", "Xenova/detr-resnet-101");
 status.textContent = "Ready";
 
 fileUpload.addEventListener("change", function (e) {
@@ -123,3 +123,4 @@ saveButton.addEventListener("click", function () {
   link.href = canvas.toDataURL("image/png");
   link.click();
 });
+
