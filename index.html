@@ -4,22 +4,30 @@
     <meta charset="UTF-8" />
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Transformers.js - Object Detection demo</title>
+    <title>Transformers.js - Object Detection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   </head>
 
   <body>
     <main class="container">
+      <h1 class="title">Object Detection Demo</h1>
+
       <label class="custom-file-upload">
         <input id="file-upload" type="file" accept="image/*" />
         <img
           class="upload-icon"
           src="https://huggingface.co/datasets/Xenova/transformers.js-docs/resolve/main/upload-icon.png"
         />
-        Upload image
+        <span>Upload Image</span>
       </label>
-      <div id="image-container"></div>
+
+      <div id="image-container">
+        <p class="placeholder">Your uploaded image will appear here</p>
+      </div>
+
       <p id="status"></p>
     </main>
+
     <script src="index.js" type="module"></script>
   </body>
 </html>
