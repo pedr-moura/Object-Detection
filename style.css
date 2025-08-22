@@ -1,10 +1,10 @@
-/* Fonte e reset básico */
+/* Reset e fontes */
 html, body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #121212;
-  color: #E0E0E0;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #121212;
+  color: #E0E0E0;
 }
 
 /* Container principal */
@@ -15,12 +15,20 @@ html, body {
   flex-direction: column;
   align-items: center;
   background: #1E1E1E;
-  padding: 30px 20px;
+  padding: 30px 25px;
   border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  text-align: center;
 }
 
-/* Upload customizado */
+/* Título */
+.title {
+  margin-bottom: 20px;
+  font-weight: 500;
+  color: #00CFFF;
+}
+
+/* Upload personalizado */
 .custom-file-upload {
   display: flex;
   align-items: center;
@@ -31,6 +39,7 @@ html, body {
   cursor: pointer;
   transition: all 0.3s ease;
   background: #2A2A2A;
+  margin-bottom: 25px;
 }
 
 .custom-file-upload:hover {
@@ -40,9 +49,15 @@ html, body {
 
 .upload-icon {
   width: 36px;
-  filter: invert(1); /* ícone claro no tema escuro */
+  filter: invert(1);
 }
 
+.custom-file-upload span {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Input escondido */
 #file-upload {
   display: none;
 }
@@ -50,8 +65,6 @@ html, body {
 /* Container de imagem */
 #image-container {
   width: 100%;
-  margin-top: 20px;
-  position: relative;
   min-height: 250px;
   background: #2A2A2A;
   border-radius: 12px;
@@ -60,11 +73,25 @@ html, body {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
-#image-container > img {
+#image-container img {
   width: 100%;
   border-radius: 12px;
+}
+
+/* Placeholder */
+#image-container .placeholder {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+/* Status */
+#status {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  color: #00CFFF;
 }
 
 /* Bounding boxes */
@@ -73,7 +100,7 @@ html, body {
   box-sizing: border-box;
   border-width: 2px;
   border-style: solid;
-  border-color: #00CFFF; /* cor de IA / destaque */
+  border-color: #00CFFF;
   pointer-events: none;
 }
 
@@ -87,4 +114,12 @@ html, body {
   background: rgba(0, 0, 0, 0.6);
   border-radius: 4px;
   pointer-events: none;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+    padding: 25px 15px;
+  }
 }
